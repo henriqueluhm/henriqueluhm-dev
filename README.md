@@ -1,18 +1,12 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
 
-## Getting Started
+Personal website built with Next.js App Router.
 
-First, run the development server:
+## Tech stack
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- next-intl
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
+🚧 Work in progress
