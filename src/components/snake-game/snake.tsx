@@ -1,8 +1,22 @@
 "use client";
 
+import { motion } from "motion/react";
+import { useTranslations } from "next-intl";
+import { useSnakeGame } from "./snake-game-context";
+
 export function Snake() {
+  const t = useTranslations("snake");
+  const { isBoardActive, openBoard } = useSnakeGame();
+
   return (
-    <div className="flex items-center gap-px">
+    <motion.button
+      layoutId="easter-egg-snake"
+      onClick={openBoard}
+      disabled={isBoardActive}
+      className={`flex items-center gap-px focus:outline-none ${
+        !isBoardActive ? "cursor-pointer hover:scale-110 active:scale-95" : ""
+      }`}
+    >
       <div className="size-2.25 bg-foreground rounded-l" />
       <div className="size-2.25 bg-foreground" />
       <div className="size-2.25 bg-foreground" />
@@ -17,10 +31,11 @@ export function Snake() {
             height="4"
             viewBox="0 0 10 4"
             fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-hidden
             className="text-red-500 fill-current"
-            aria-hidden="true"
           >
+            <title>{t("tongue")}</title>
             <path
               d="M0 2H7L9 0.5M7 2L9 3.5"
               stroke="currentColor"
@@ -29,6 +44,6 @@ export function Snake() {
           </svg>
         </div>
       </div>
-    </div>
+    </motion.button>
   );
 }
