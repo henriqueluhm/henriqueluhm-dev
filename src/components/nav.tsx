@@ -1,16 +1,20 @@
-import { useTranslations } from "next-intl";
 import { LanguageToggle } from "./language-toggle";
 import { ModeToggle } from "./mode-toggle";
 
 export function Nav() {
-  const t = useTranslations("Home");
-
   return (
-    <nav className="p-4 w-full flex justify-end">
+    <nav
+      className="
+        fixed inset-x-0 z-50
+        bottom-0 md:top-0 md:bottom-auto
+        p-4
+        flex justify-end gap-2
+        bg-background/80 backdrop-blur
+        border-t md:border-t-0 md:border-b
+      "
+    >
       <LanguageToggle />
       <ModeToggle />
-
-      {t("title")}
     </nav>
   );
 }
