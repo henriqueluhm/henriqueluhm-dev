@@ -124,3 +124,56 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  @keyframes snake-tongue {
+    0%,
+    55% {
+      transform: scaleX(0) translateY(-50%);
+      opacity: 0;
+    }
+    60% {
+      transform: scaleX(1) translateY(-50%);
+      opacity: 1;
+    }
+    60%,
+    80% {
+      transform: scaleX(1) translateY(-50%);
+      opacity: 1;
+    }
+    70% {
+      transform: scaleX(1) translateY(calc(-50% - 1px));
+    }
+    75% {
+      transform: scaleX(1) translateY(calc(-50% + 1px));
+    }
+    90%,
+    100% {
+      transform: scaleX(0) translateY(-50%);
+      opacity: 0;
+    }
+  }
+
+  .animate-snake-tongue {
+    animation: snake-tongue 2.5s ease-in-out infinite;
+    transform-origin: left center;
+  }
+
+  @keyframes snake-blink {
+    0%,
+    90%,
+    100% {
+      transform: scaleY(1);
+    }
+    93%,
+    97% {
+      transform: scaleY(0);
+    }
+  }
+
+  .animate-snake-blink {
+    animation: snake-blink 5s ease-in-out infinite;
+    display: inline-block;
+    transform-origin: center;
+  }
+}

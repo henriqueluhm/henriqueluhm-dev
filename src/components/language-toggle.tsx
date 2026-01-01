@@ -1,13 +1,21 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { setLocale as setLocaleAction } from "@/i18n/actions";
 import type { Locale } from "@/i18n/config";
 
 export function LanguageToggle() {
   const router = useRouter();
+  const t = useTranslations("language");
   const [mounted, setMounted] = useState(false);
   const [locale, setLocale] = useState<Locale>("en");
 
@@ -30,19 +38,31 @@ export function LanguageToggle() {
 
     await setLocaleAction(nextLocale);
     setLocale(nextLocale);
-
     router.refresh();
   }
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={toggleLanguage}
-      aria-label="Toggle language"
-      className="font-mono text-xs"
-    >
-      {locale.toUpperCase()}
-    </Button>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger
+          render={
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleLanguage}
+              aria-label={t("aria")}
+            >
+              {locale}
+            </Button>
+          }
+        />
+
+        <TooltipContent side="bottom" align="center">
+          <span className="text-xs">
+            {t("current", { language: t(`name.${locale}`) })}
+          </span>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   );
 }
