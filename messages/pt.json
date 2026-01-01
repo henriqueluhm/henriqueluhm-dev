@@ -1,5 +1,14 @@
 {
-  "Home": {
-    "title": "Título"
+  "NotFound": {
+    "message": "esta página não foi encontrada, mas você encontrou outra coisa:",
+    "back": "ir para o início"
+  },
+  "language": {
+    "aria": "Alternar idioma",
+    "current": "Idioma atual: {language}",
+    "name": {
+      "en": "Inglês  🇺🇸",
+      "pt": "Português  🇧🇷"
+    }
   }
 }

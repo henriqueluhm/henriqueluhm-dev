@@ -1,5 +1,14 @@
 {
-  "Home": {
-    "title": "Title"
+  "NotFound": {
+    "message": "this page could not be found, but you found something else:",
+    "back": "go to start"
+  },
+  "language": {
+    "aria": "Toggle language",
+    "current": "Current language: {language}",
+    "name": {
+      "en": "English  🇺🇸",
+      "pt": "Portuguese  🇧🇷"
+    }
   }
 }
