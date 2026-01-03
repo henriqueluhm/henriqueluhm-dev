@@ -13,6 +13,10 @@
   },
   "snake": {
     "tongue": "Língua da cobra",
+    "hint": {
+      "desktop": "use as setas para começar",
+      "mobile": "deslize para começar"
+    },
     "controls": {
       "or": "ou",
       "move": "mover",

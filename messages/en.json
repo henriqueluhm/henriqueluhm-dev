@@ -13,6 +13,10 @@
   },
   "snake": {
     "tongue": "Snake tongue",
+    "hint": {
+      "desktop": "use arrow keys to start",
+      "mobile": "swipe to start"
+    },
     "controls": {
       "or": "or",
       "move": "move",
