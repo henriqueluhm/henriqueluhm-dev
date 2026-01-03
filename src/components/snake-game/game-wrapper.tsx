@@ -6,7 +6,6 @@ import { useSnakeGame } from "./context";
 import { GameGrid } from "./game-grid";
 import { GameHeader } from "./game-header";
 import { GameHint } from "./game-hint";
-import { Snake } from "./snake";
 
 export function GameWrapper() {
   const { isBoardActive } = useSnakeGame();
@@ -34,17 +33,16 @@ export function GameWrapper() {
       >
         <GameGrid />
 
-        <div
+        <motion.div
+          layoutId="snake-target-position"
           className="absolute inset-0 grid"
           style={{
             gridTemplateColumns: `repeat(${GAME_CONFIG.COLS}, 1fr)`,
             gridTemplateRows: `repeat(${GAME_CONFIG.ROWS}, 1fr)`,
           }}
         >
-          <div className="col-start-8 col-span-3 row-start-8 flex items-center justify-center z-20">
-            <Snake />
-          </div>
-        </div>
+          <div className="col-start-8 col-span-3 row-start-8 flex items-center justify-center z-20" />
+        </motion.div>
 
         <GameHint />
       </motion.div>

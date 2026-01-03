@@ -9,15 +9,10 @@ export function GameHeader() {
   const { closeBoard } = useSnakeGame();
 
   return (
-    <div className="flex w-full items-center justify-between">
+    <div className="flex w-full items-center justify-end gap-4">
       <SnakeControlsHint />
 
-      <Button
-        size="icon"
-        variant="ghost"
-        className="border-0 ml-auto"
-        onClick={closeBoard}
-      >
+      <Button size="icon" variant="ghost" onClick={closeBoard}>
         <XIcon />
       </Button>
     </div>

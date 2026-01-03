@@ -37,6 +37,10 @@ export function Snake() {
       onClick={openBoard}
       disabled={isBoardActive}
       className={buttonClassName}
+      style={{
+        position: isBoardActive ? "absolute" : "relative",
+        zIndex: 30,
+      }}
     >
       <SnakeBody />
       <SnakeHead />

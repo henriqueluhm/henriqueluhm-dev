@@ -52,7 +52,7 @@ export function SnakeControlsHint() {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger
-          render={<QuestionIcon className="size-4 ml-2 hidden md:block" />}
+          render={<QuestionIcon className="size-4 hidden md:block" />}
         />
         <TooltipContent side="top" align="start">
           <div className="grid grid-cols-[auto_1fr] gap-x-6 gap-y-6 py-2 text-xs text-background items-center">
