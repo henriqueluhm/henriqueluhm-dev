@@ -12,6 +12,13 @@
     }
   },
   "snake": {
-    "tongue": "Snake tongue"
+    "tongue": "Snake tongue",
+    "controls": {
+      "or": "or",
+      "move": "move",
+      "start": "start",
+      "exit": "exit",
+      "swipe": "swipe to control the snake"
+    }
   }
 }

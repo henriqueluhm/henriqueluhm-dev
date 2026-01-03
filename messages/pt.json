@@ -12,6 +12,13 @@
     }
   },
   "snake": {
-    "tongue": "Língua da cobra"
+    "tongue": "Língua da cobra",
+    "controls": {
+      "or": "ou",
+      "move": "mover",
+      "start": "iniciar",
+      "exit": "sair",
+      "swipe": "deslize o dedo para controlar a cobra"
+    }
   }
 }
