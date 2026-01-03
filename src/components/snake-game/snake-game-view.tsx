@@ -4,7 +4,10 @@ import { AnimatePresence, motion } from "motion/react";
 import { nanoid } from "nanoid";
 import { useMemo } from "react";
 import { Snake } from "./snake";
+import { SnakeControlsHint } from "./snake-controls-hint";
 import { useSnakeGame } from "./snake-game-context";
+import { Button } from "../ui/button";
+import { XIcon } from "@phosphor-icons/react";
 
 const COLS = 17;
 const ROWS = 15;
@@ -40,15 +43,28 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
           key="game-container"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="flex flex-col items-center"
+          className="flex flex-col gap-2 items-center"
         >
+          <div className="flex w-full items-center justify-between">
+            <SnakeControlsHint />
+
+            <Button
+              size="icon"
+              variant="ghost"
+              className="border-0"
+              onClick={closeBoard}
+            >
+              <XIcon />
+            </Button>
+          </div>
+
           <motion.div
             layout
             style={{
               width: COLS * CELL_SIZE_PX,
               height: ROWS * CELL_SIZE_PX,
             }}
-            className="border bg-muted/30 relative overflow-hidden shadow-2xl"
+            className="relative overflow-hidden shadow-2xl"
           >
             <div
               className="absolute inset-0 grid"
@@ -60,7 +76,11 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
               {gridCells.map((cell) => (
                 <div
                   key={cell.id}
-                  className={cell.isEven ? "bg-foreground/3" : "bg-transparent"}
+                  className={
+                    cell.isEven
+                      ? "bg-emerald-100 dark:bg-lime-950"
+                      : "bg-green-200 dark:bg-emerald-950"
+                  }
                 />
               ))}
             </div>
@@ -81,14 +101,6 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
               Use arrow keys to start
             </div>
           </motion.div>
-
-          <button
-            type="button"
-            onClick={closeBoard}
-            className="mt-6 text-[10px] font-mono uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
-          >
-            [ Close Board ]
-          </button>
         </motion.div>
       )}
     </div>

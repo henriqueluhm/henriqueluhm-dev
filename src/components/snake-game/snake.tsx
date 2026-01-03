@@ -17,11 +17,10 @@ export function Snake() {
         !isBoardActive ? "cursor-pointer hover:scale-110 active:scale-95" : ""
       }`}
     >
-      <div className="size-2.25 bg-foreground rounded-l" />
-      <div className="size-2.25 bg-foreground" />
-      <div className="size-2.25 bg-foreground" />
-
-      <div className="relative w-3.5 h-2.75 bg-foreground rounded-r-full rounded-l-sm flex flex-col items-center justify-center gap-px pl-0.5 z-10">
+      <div className="size-2.25 bg-foreground rounded-l shadow-md" />
+      <div className="size-2.25 bg-foreground shadow-md" />
+      <div className="size-2.25 bg-foreground shadow-md" />
+      <div className="relative w-3.5 h-2.75 bg-foreground rounded-r-full rounded-l-sm flex flex-col items-center justify-center gap-px pl-0.5 z-10 shadow-md">
         <div className="size-1 rounded-full bg-background animate-snake-blink" />
         <div className="size-1 rounded-full bg-background animate-snake-blink" />
 
