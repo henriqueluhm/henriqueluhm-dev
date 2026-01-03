@@ -1,19 +1,21 @@
 "use client";
 
+import { XIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "motion/react";
 import { nanoid } from "nanoid";
+import { useTranslations } from "next-intl";
 import { useMemo } from "react";
+import { Button } from "../ui/button";
 import { Snake } from "./snake";
 import { SnakeControlsHint } from "./snake-controls-hint";
 import { useSnakeGame } from "./snake-game-context";
-import { Button } from "../ui/button";
-import { XIcon } from "@phosphor-icons/react";
 
 const COLS = 17;
 const ROWS = 15;
 const CELL_SIZE_PX = 18;
 
 export function SnakeGameView({ children }: { children: React.ReactNode }) {
+  const t = useTranslations("snake");
   const { isBoardActive, closeBoard } = useSnakeGame();
 
   const gridCells = useMemo(() => {
@@ -24,14 +26,15 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-100 w-full">
+    <div className="relative flex flex-col items-center justify-center min-h-100 w-full h-full">
       <AnimatePresence mode="popLayout">
         {!isBoardActive && (
           <motion.div
             key="not-found-ui"
+            layout
             exit={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
             transition={{ duration: 0.4 }}
-            className="flex flex-col items-center gap-10"
+            className="flex flex-col items-center justify-center gap-10 w-full z-10"
           >
             {children}
           </motion.div>
@@ -43,7 +46,7 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
           key="game-container"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="flex flex-col gap-2 items-center"
+          className="flex flex-col gap-2 items-center z-20"
         >
           <div className="flex w-full items-center justify-between">
             <SnakeControlsHint />
@@ -51,7 +54,7 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
             <Button
               size="icon"
               variant="ghost"
-              className="border-0"
+              className="border-0 ml-auto"
               onClick={closeBoard}
             >
               <XIcon />
@@ -97,8 +100,10 @@ export function SnakeGameView({ children }: { children: React.ReactNode }) {
               </div>
             </div>
 
-            <div className="absolute bottom-2 w-full text-center text-[9px] font-mono text-muted-foreground/40 uppercase tracking-widest">
-              Use arrow keys to start
+            <div className="absolute bottom-2 w-full text-center text-[9px] font-mono text-muted-foreground/50 uppercase tracking-widest">
+              <span className="hidden md:inline">{t("hint.desktop")}</span>
+
+              <span className="md:hidden">{t("hint.mobile")}</span>
             </div>
           </motion.div>
         </motion.div>
