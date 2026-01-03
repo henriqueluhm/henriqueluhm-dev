@@ -1,8 +1,4 @@
 {
-  "NotFound": {
-    "message": "esta página não foi encontrada, mas você encontrou outra coisa:",
-    "back": "ir para o início"
-  },
   "language": {
     "aria": "Alternar idioma",
     "current": "Idioma atual: {language}",
@@ -13,9 +9,12 @@
   },
   "snake": {
     "tongue": "Língua da cobra",
+    "gameOver": "fim de jogo",
     "hint": {
       "desktop": "use as setas para começar",
-      "mobile": "deslize para começar"
+      "mobile": "deslize para começar",
+      "restartDesktop": "pressione <key></key> para reiniciar",
+      "restartMobile": "toque para reiniciar"
     },
     "controls": {
       "or": "ou",
@@ -24,5 +23,9 @@
       "exit": "sair",
       "swipe": "deslize o dedo para controlar a cobra"
     }
+  },
+  "notFound": {
+    "message": "esta página não foi encontrada, mas você encontrou outra coisa:",
+    "back": "ir para o início"
   }
 }

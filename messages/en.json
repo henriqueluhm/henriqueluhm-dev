@@ -1,8 +1,4 @@
 {
-  "NotFound": {
-    "message": "this page could not be found, but you found something else:",
-    "back": "go to start"
-  },
   "language": {
     "aria": "Toggle language",
     "current": "Current language: {language}",
@@ -13,9 +9,12 @@
   },
   "snake": {
     "tongue": "Snake tongue",
+    "gameOver": "game over",
     "hint": {
       "desktop": "use arrow keys to start",
-      "mobile": "swipe to start"
+      "mobile": "swipe to start",
+      "restartDesktop": "press <key></key> to restart",
+      "restartMobile": "tap to restart"
     },
     "controls": {
       "or": "or",
@@ -24,5 +23,9 @@
       "exit": "exit",
       "swipe": "swipe to control the snake"
     }
+  },
+  "notFound": {
+    "message": "this page could not be found, but you found something else:",
+    "back": "go to start"
   }
 }
