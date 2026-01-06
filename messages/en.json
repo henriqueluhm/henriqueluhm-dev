@@ -27,5 +27,9 @@
   "notFound": {
     "message": "this page could not be found, but you found something else:",
     "back": "go to start"
+  },
+  "home": {
+    "img": "photo of the author",
+    "description": "full-stack developer based in Brazil with 5+ years of experience in React, Node.js, AWS, and a strong interest in Rust and Go."
   }
 }
