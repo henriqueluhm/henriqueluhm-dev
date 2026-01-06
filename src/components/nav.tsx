@@ -7,8 +7,9 @@ export function Nav() {
       className="
         fixed inset-x-0 z-50
         bottom-0 md:top-0 md:bottom-auto
-        p-4
-        flex justify-end gap-2
+        h-(--nav-height)
+        px-4
+        flex justify-end items-center gap-2
         bg-background/80 backdrop-blur
         border-t md:border-t-0 md:border-b
       "

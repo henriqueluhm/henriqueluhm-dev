@@ -123,6 +123,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  :root {
+    --nav-height: 4rem; 
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --nav-height: 4.5rem; 
+    }
+  }
 }
 
 @layer utilities {
