@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import { useSnakeGame } from "./context";
 
 function ControlRow({ keys, label }: { keys: string[]; label: string }) {
   return (
@@ -46,11 +47,13 @@ function MovementControls({ orLabel }: { orLabel: string }) {
 }
 
 export function SnakeControlsHint() {
+  const { isBoardActive } = useSnakeGame();
+
   const t = useTranslations("snake.controls");
 
   return (
     <TooltipProvider>
-      <Tooltip>
+      <Tooltip disabled={isBoardActive}>
         <TooltipTrigger
           render={<QuestionIcon className="size-4 hidden md:block" />}
         />
