@@ -30,6 +30,9 @@
   },
   "home": {
     "img": "foto do autor",
-    "description": "desenvolvedor full-stack baseado no Brasil com mais de 5 anos de experiência em React, Node.js, AWS e muito interesse em Rust e Go."
+    "description": "desenvolvedor full-stack baseado no Brasil com mais de 5 anos de experiência em React, Node.js, AWS e muito interesse em Rust e Go.",
+    "experience": "experiência",
+    "education": "educação",
+    "personalProjects": "projetos pessoais"
   }
 }
