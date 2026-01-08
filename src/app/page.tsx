@@ -1,12 +1,9 @@
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { AccordionSection } from "@/components/accordion-section";
+import { Timeline, TimelineTitle } from "@/components/timeline";
+import { Accordion } from "@/components/ui/accordion";
 
 export default async function Page() {
   const t = await getTranslations();
@@ -15,7 +12,10 @@ export default async function Page() {
     <main className="mb-(--nav-height) md:mt-(--nav-height) flex flex-col items-center justify-center px-4 py-10">
       <div className="w-full max-w-160">
         <div className="flex flex-col gap-10">
-          <div className="flex flex-col sm:flex-row gap-6 items-center">
+          <div
+            id="introduction"
+            className="flex flex-col sm:flex-row gap-6 items-center scroll-mt-24"
+          >
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -50,64 +50,33 @@ export default async function Page() {
             multiple
             defaultValue={["experience", "education", "personalProjects"]}
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+            <AccordionSection
+              id="experience"
+              title={t("home.experience")}
+              delay={0.3}
             >
-              <AccordionItem value="experience">
-                <AccordionTrigger>{t("home.experience")}</AccordionTrigger>
-                <AccordionContent>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  >
-                    experience here
-                  </motion.div>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
+              <Timeline>
+                <TimelineTitle>Medcloud</TimelineTitle>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
-            >
-              <AccordionItem value="education">
-                <AccordionTrigger>{t("home.education")}</AccordionTrigger>
-                <AccordionContent>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  >
-                    education here
-                  </motion.div>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
+                {/* <TimelineCheckpoint title={t()}>checkpoint 1</TimelineCheckpoint> */}
+              </Timeline>
+            </AccordionSection>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5, ease: "easeOut" }}
+            <AccordionSection
+              id="education"
+              title={t("home.education")}
+              delay={0.4}
             >
-              <AccordionItem value="personalProjects">
-                <AccordionTrigger>
-                  {t("home.personalProjects")}
-                </AccordionTrigger>
-                <AccordionContent>
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                  >
-                    projects here
-                  </motion.div>
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
+              education here
+            </AccordionSection>
+
+            <AccordionSection
+              id="personalProjects"
+              title={t("home.personalProjects")}
+              delay={0.5}
+            >
+              projects here
+            </AccordionSection>
           </Accordion>
         </div>
       </div>
