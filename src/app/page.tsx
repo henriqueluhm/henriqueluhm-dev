@@ -1,3 +1,8 @@
+import {
+  CodeIcon,
+  GraduationCapIcon,
+  ReadCvLogoIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import * as motion from "motion/react-client";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
@@ -46,12 +51,10 @@ export default async function Page() {
             </motion.div>
           </div>
 
-          <Accordion
-            multiple
-            defaultValue={["experience", "education", "personalProjects"]}
-          >
+          <Accordion multiple defaultValue={["experience", "personalProjects"]}>
             <AccordionSection
               id="experience"
+              icon={<ReadCvLogoIcon />}
               title={t("home.experience.title")}
               delay={0.3}
             >
@@ -87,19 +90,34 @@ export default async function Page() {
             </AccordionSection>
 
             <AccordionSection
-              id="education"
-              title={t("home.education")}
-              delay={0.4}
-            >
-              education here
-            </AccordionSection>
-
-            <AccordionSection
               id="personalProjects"
+              icon={<CodeIcon />}
               title={t("home.personalProjects")}
               delay={0.5}
             >
               projects here
+            </AccordionSection>
+
+            <AccordionSection
+              id="education"
+              icon={<GraduationCapIcon />}
+              title={t("home.education.education")}
+              delay={0.4}
+              className="flex flex-col gap-8"
+            >
+              <Timeline title={t("home.education.uepg")}>
+                <TimelineCheckpoint
+                  title={t("home.education.bachelor")}
+                  period={"2025 - 2025"}
+                />
+              </Timeline>
+
+              <Timeline title={t("home.education.santana")}>
+                <TimelineCheckpoint
+                  title={t("home.education.highSchool")}
+                  period="2017 - 2019"
+                />
+              </Timeline>
             </AccordionSection>
           </Accordion>
         </div>

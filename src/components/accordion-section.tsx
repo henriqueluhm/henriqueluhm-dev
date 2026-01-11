@@ -9,15 +9,19 @@ import {
 type AccordionSectionProps = {
   id: string;
   title: string;
+  icon: ReactNode;
   children: ReactNode;
   delay?: number;
+  className?: string;
 };
 
 export function AccordionSection({
   id,
   title,
+  icon,
   children,
   delay = 0,
+  className,
 }: AccordionSectionProps) {
   return (
     <motion.section
@@ -28,12 +32,18 @@ export function AccordionSection({
       className="scroll-mt-24"
     >
       <AccordionItem value={id}>
-        <AccordionTrigger>{title}</AccordionTrigger>
+        <AccordionTrigger>
+          <div className="flex items-center gap-2">
+            {icon}
+            <span>{title}</span>
+          </div>
+        </AccordionTrigger>
         <AccordionContent>
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
+            className={className}
           >
             {children}
           </motion.div>

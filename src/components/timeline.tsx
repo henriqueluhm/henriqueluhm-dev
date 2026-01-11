@@ -3,13 +3,14 @@ import { XIcon } from "@phosphor-icons/react";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 import { type ReactNode, useState } from "react";
+import { cn } from "@/lib/utils";
 import { Button } from "./ui/button";
 
 type TimelineCheckpointProps = {
-  title: string;
+  title: ReactNode;
   period: string;
   intiallyExpanded?: boolean;
-  children: ReactNode;
+  children?: ReactNode;
 };
 
 function TimelineCheckpoint({
@@ -22,27 +23,34 @@ function TimelineCheckpoint({
 
   return (
     <div className="flex flex-col gap-1 text-sm">
-      <div className="flex items-start sm:items-center justify-between">
+      <div
+        className={cn("flex items-start sm:items-center justify-between", {
+          "ml-3.75 pl-2 border-l border-muted-foreground":
+            children === undefined,
+        })}
+      >
         <div className="flex items-start sm:items-center gap-2">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="border-transparent shrink-0"
-            onClick={() => setExpanded((prev) => !prev)}
-            aria-expanded={expanded}
-            aria-label={expanded ? "Collapse section" : "Expand section"}
-          >
-            <motion.span
-              animate={{ rotate: expanded ? 0 : -45 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+          {children !== undefined && (
+            <Button
+              variant="ghost"
+              size="icon"
+              className="border-transparent shrink-0"
+              onClick={() => setExpanded((prev) => !prev)}
+              aria-expanded={expanded}
+              aria-label={expanded ? "Collapse section" : "Expand section"}
             >
-              <XIcon className="size-3" />
-            </motion.span>
-          </Button>
+              <motion.span
+                animate={{ rotate: expanded ? 0 : -45 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+              >
+                <XIcon className="size-3" />
+              </motion.span>
+            </Button>
+          )}
 
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-0">
-            <h5 className="font-medium -mt-px sm:mt-0">{title}</h5>
-            <div className="text-muted-foreground font-semibold text-xs sm:hidden -mt-1">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-0.5">
+            <h5 className="font-medium -mt-0.5 sm:mt-0">{title}</h5>
+            <div className="text-muted-foreground font-semibold text-xs sm:hidden sm:mt-0 -mt-1">
               {period}
             </div>
           </div>
@@ -80,9 +88,9 @@ type TimelineProps = {
 
 function Timeline({ title, children }: TimelineProps) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-1 pl-2">
       <h4 className="font-medium">{title}</h4>
-      <div className="flex flex-col gap-6">{children}</div>
+      <div className="flex flex-col gap-4">{children}</div>
     </div>
   );
 }
