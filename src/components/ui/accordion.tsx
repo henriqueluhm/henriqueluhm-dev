@@ -8,7 +8,7 @@ function Accordion({ className, ...props }: AccordionPrimitive.Root.Props) {
   return (
     <AccordionPrimitive.Root
       data-slot="accordion"
-      className={cn("flex w-full flex-col gap-10", className)}
+      className={cn("flex w-full flex-col gap-6", className)}
       {...props}
     />
   );
