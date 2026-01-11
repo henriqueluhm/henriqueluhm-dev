@@ -52,7 +52,13 @@
         }
       }
     },
-    "education": "education",
+    "education": {
+      "education": "education",
+      "uepg": "State University of Ponta Grossa",
+      "bachelor": "bachelor's degree in software engineering",
+      "santana": "Sant'Ana High School",
+      "highSchool": "technical high school in information technology"
+    },
     "personalProjects": "personal projects"
   }
 }

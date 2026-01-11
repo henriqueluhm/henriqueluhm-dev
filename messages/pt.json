@@ -52,7 +52,13 @@
         }
       }
     },
-    "education": "educação",
+    "education": {
+      "education": "educação",
+      "uepg": "Universidade Estadual de Ponta Grossa",
+      "bachelor": "bacharelado em engenharia de software",
+      "santana": "Colégio Sant'Ana",
+      "highSchool": "ensino médio integrado ao técnico em informática"
+    },
     "personalProjects": "projetos pessoais"
   }
 }
