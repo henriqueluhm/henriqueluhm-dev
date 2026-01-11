@@ -31,7 +31,27 @@
   "home": {
     "img": "foto do autor",
     "description": "desenvolvedor full-stack baseado no Brasil com mais de 5 anos de experiência em React, Node.js, AWS e muito interesse em Rust e Go.",
-    "experience": "experiência",
+    "experience": {
+      "medcloud": "Medcloud | Ecossistema de Saúde Digital",
+      "title": "experiência",
+      "roles": {
+        "fullstack": {
+          "title": "desenvolvedor full-stack pleno",
+          "period": "mai. 2023 – atual",
+          "description": "Atuo como desenvolvedor full-stack na construção e evolução de produtos usados em escala. Meu trabalho no dia a dia envolve arquitetar e entregar novas funcionalidades, melhorar sistemas existentes e tomar decisões técnicas que ajudam a manter o código saudável à medida que o produto cresce.\n\nTrabalhei no desenvolvimento de editores de texto ricos personalizados, com formatação avançada, transcrição assistida por IA e geração de PDFs para fluxos clínicos. Também contribuí para o planejamento da refatoração de um grande conjunto de funções AWS Lambda. Além disso, ajudo no onboarding de novos desenvolvedores, participo de discussões de contratação e apoio a definição técnica inicial de novos produtos."
+        },
+        "junior": {
+          "title": "desenvolvedor full-stack júnior",
+          "period": "abr. 2021 – mai. 2023",
+          "description": "Como desenvolvedor full-stack júnior, atuei no desenvolvimento de funcionalidades centrais do produto, tanto no backend quanto no frontend. Um dos projetos mais marcantes foi um módulo de teleconsulta com AWS Chime, adotado por diversas instituições de saúde, incluindo um piloto no setor público.\n\nTambém trabalhei em um sistema de assinaturas recorrentes e ajudei a construir uma biblioteca interna de componentes, aprendendo bastante sobre escalabilidade, consistência e trabalho em equipe."
+        },
+        "intern": {
+          "title": "estagiário em desenvolvimento full-stack",
+          "period": "out. 2020 – abr. 2021",
+          "description": "Durante o estágio, trabalhei próximo de desenvolvedores mais experientes para entender como sistemas reais são projetados, testados e mantidos. Contribuí para um módulo financeiro que lidava com operações reais de clínicas, como faturamento, estoque e repasse de receitas. Foi meu primeiro contato profundo com desenvolvimento em produção, usando Node.js, TypeScript, React, MySQL e serviços da AWS."
+        }
+      }
+    },
     "education": "educação",
     "personalProjects": "projetos pessoais"
   }

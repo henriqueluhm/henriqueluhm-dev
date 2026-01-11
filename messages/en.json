@@ -31,7 +31,27 @@
   "home": {
     "img": "photo of the author",
     "description": "full-stack developer based in Brazil with 5+ years of experience in React, Node.js, AWS, and a strong interest in Rust and Go.",
-    "experience": "experience",
+    "experience": {
+      "medcloud": "Medcloud | Digital Health Ecosystem",
+      "title": "experience",
+      "roles": {
+        "fullstack": {
+          "title": "full-stack developer",
+          "period": "may 2023 – present",
+          "description": "I work across the full stack building and evolving products used at scale. My day-to-day work includes architecting and shipping new features, improving existing systems, and making technical decisions that help keep the codebase healthy as the product grows.\n\nI worked on custom rich-text editors with advanced formatting, AI-assisted transcription, and PDF generation for clinical workflows. I’ve also contributed to planning the refactoring of a large AWS Lambda codebase. Additionally, I help onboard new developers, take part in hiring discussions, and support the early technical direction of new products."
+        },
+        "junior": {
+          "title": "junior full-stack developer",
+          "period": "apr 2021 – may 2023",
+          "description": "As a junior developer, I worked on core product features across both backend and frontend. One highlight was building a teleconsultation module using AWS Chime, which ended up being used by multiple healthcare providers, including a public-sector pilot.\n\nI also worked on a recurring subscription system and helped build an internal component library, which taught me a lot about scalability, consistency, and collaborating within a growing product team."
+        },
+        "intern": {
+          "title": "full-stack developer intern",
+          "period": "oct 2020 – apr 2021",
+          "description": "During my internship, I worked closely with more experienced developers to learn how production systems are designed, tested, and maintained. I contributed to a financial module that handled real clinic operations like billing, inventory, and revenue sharing. It was my first deep exposure to real-world software development, working hands-on with Node.js, TypeScript, React, MySQL, and AWS."
+        }
+      }
+    },
     "education": "education",
     "personalProjects": "personal projects"
   }
