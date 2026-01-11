@@ -2,7 +2,7 @@ import * as motion from "motion/react-client";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { AccordionSection } from "@/components/accordion-section";
-import { Timeline, TimelineTitle } from "@/components/timeline";
+import { Timeline, TimelineCheckpoint } from "@/components/timeline";
 import { Accordion } from "@/components/ui/accordion";
 
 export default async function Page() {
@@ -40,9 +40,9 @@ export default async function Page() {
               <h1 className="text-3xl text-center sm:text-start font-bold tracking-tight">
                 Henrique Luhm
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <h2 className="text-lg text-muted-foreground leading-relaxed">
                 {t("home.description")}
-              </p>
+              </h2>
             </motion.div>
           </div>
 
@@ -52,13 +52,37 @@ export default async function Page() {
           >
             <AccordionSection
               id="experience"
-              title={t("home.experience")}
+              title={t("home.experience.title")}
               delay={0.3}
             >
-              <Timeline>
-                <TimelineTitle>Medcloud</TimelineTitle>
+              <Timeline title={t("home.experience.medcloud")}>
+                <TimelineCheckpoint
+                  intiallyExpanded
+                  title={t("home.experience.roles.fullstack.title")}
+                  period={t("home.experience.roles.fullstack.period")}
+                >
+                  <p className="whitespace-pre-line">
+                    {t("home.experience.roles.fullstack.description")}
+                  </p>
+                </TimelineCheckpoint>
 
-                {/* <TimelineCheckpoint title={t()}>checkpoint 1</TimelineCheckpoint> */}
+                <TimelineCheckpoint
+                  title={t("home.experience.roles.junior.title")}
+                  period={t("home.experience.roles.junior.period")}
+                >
+                  <p className="whitespace-pre-line">
+                    {t("home.experience.roles.junior.description")}
+                  </p>
+                </TimelineCheckpoint>
+
+                <TimelineCheckpoint
+                  title={t("home.experience.roles.intern.title")}
+                  period={t("home.experience.roles.intern.period")}
+                >
+                  <p className="whitespace-pre-line">
+                    {t("home.experience.roles.intern.description")}
+                  </p>
+                </TimelineCheckpoint>
               </Timeline>
             </AccordionSection>
 

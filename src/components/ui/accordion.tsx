@@ -34,14 +34,14 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "focus-visible:ring-ring/50 focus-visible:border-ring **:data-[slot=accordion-trigger-icon]:text-foreground rounded-none py-2.5 text-left font-medium text-lg focus-visible:ring-1 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 group/accordion-trigger relative flex flex-1 items-start justify-between transition-all outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
+          "focus-visible:ring-ring/50 focus-visible:border-ring **:data-[slot=accordion-trigger-icon]:text-foreground rounded-none py-2.5 text-left font-medium text-xl focus-visible:ring-1 **:data-[slot=accordion-trigger-icon]:ml-auto **:data-[slot=accordion-trigger-icon]:size-4 group/accordion-trigger relative flex flex-1 items-center justify-between transition-all outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer",
           className,
         )}
         {...props}
       >
-        <span className="relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-100 after:ease-out group-hover/accordion-trigger:after:w-full">
+        <h3 className="relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-foreground after:transition-all after:duration-100 after:ease-out group-hover/accordion-trigger:after:w-full">
           {children}
-        </span>
+        </h3>
         <CaretDownIcon
           data-slot="accordion-trigger-icon"
           className="
