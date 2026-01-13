@@ -93,7 +93,7 @@ export default async function Page() {
               id="personalProjects"
               icon={<CodeIcon />}
               title={t("home.personalProjects")}
-              delay={0.5}
+              delay={0.4}
             >
               projects here
             </AccordionSection>
@@ -102,7 +102,7 @@ export default async function Page() {
               id="education"
               icon={<GraduationCapIcon />}
               title={t("home.education.education")}
-              delay={0.4}
+              delay={0.5}
               className="flex flex-col gap-8"
             >
               <Timeline title={t("home.education.uepg")}>

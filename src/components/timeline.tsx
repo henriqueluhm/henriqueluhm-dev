@@ -36,7 +36,6 @@ function TimelineCheckpoint({
               size="icon"
               className="border-transparent shrink-0"
               onClick={() => setExpanded((prev) => !prev)}
-              aria-expanded={expanded}
               aria-label={expanded ? "Collapse section" : "Expand section"}
             >
               <motion.span
