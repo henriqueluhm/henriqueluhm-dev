@@ -19,9 +19,9 @@ export function ModeToggle() {
     <Button
       variant="ghost"
       size="icon"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label="Toggle theme"
-      className="relative"
+      className="relative border-0"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       <SunIcon
         className={`h-5 w-5 transition-transform duration-300 ${

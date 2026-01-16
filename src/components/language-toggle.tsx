@@ -49,8 +49,9 @@ export function LanguageToggle() {
             <Button
               variant="ghost"
               size="icon"
-              onClick={toggleLanguage}
               aria-label={t("aria")}
+              className="border-0"
+              onClick={toggleLanguage}
             >
               {locale}
             </Button>
