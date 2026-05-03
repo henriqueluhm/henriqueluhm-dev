@@ -8,7 +8,6 @@
     }
   },
   "snake": {
-    "tongue": "Snake tongue",
     "gameOver": "game over",
     "hint": {
       "desktop": "use arrow keys to start",
@@ -25,7 +24,7 @@
     }
   },
   "notFound": {
-    "message": "this page could not be found, but you found something else:",
+    "message": "this page could not be found",
     "back": "go to start"
   },
   "home": {

@@ -8,7 +8,6 @@
     }
   },
   "snake": {
-    "tongue": "Língua da cobra",
     "gameOver": "fim de jogo",
     "hint": {
       "desktop": "use as setas para começar",
@@ -25,7 +24,7 @@
     }
   },
   "notFound": {
-    "message": "esta página não foi encontrada, mas você encontrou outra coisa:",
+    "message": "esta página não foi encontrada",
     "back": "ir para o início"
   },
   "home": {
