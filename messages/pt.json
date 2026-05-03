@@ -31,13 +31,14 @@
     "img": "foto do autor",
     "description": "desenvolvedor full-stack baseado no Brasil com mais de 5 anos de experiência em React, Node.js, AWS e muito interesse em Rust e Go.",
     "experience": {
-      "medcloud": "Medcloud | Ecossistema de Saúde Digital",
+      "medcloud": "<company>Medcloud</company> - Ecossistema de Saúde Digital",
+      "certta": "<company>Certta</company> - Hub antifraude inteligente",
       "title": "experiência",
       "roles": {
         "fullstack": {
           "title": "desenvolvedor full-stack pleno",
-          "period": "mai. 2023 – atual",
-          "description": "Atuo como desenvolvedor full-stack na construção e evolução de produtos usados em escala. Meu trabalho no dia a dia envolve arquitetar e entregar novas funcionalidades, melhorar sistemas existentes e tomar decisões técnicas que ajudam a manter o código saudável à medida que o produto cresce.\n\nTrabalhei no desenvolvimento de editores de texto ricos personalizados, com formatação avançada, transcrição assistida por IA e geração de PDFs para fluxos clínicos. Também contribuí para o planejamento da refatoração de um grande conjunto de funções AWS Lambda. Além disso, ajudo no onboarding de novos desenvolvedores, participo de discussões de contratação e apoio a definição técnica inicial de novos produtos."
+          "period": "mai. 2023 – fev. 2026",
+          "description": "Atuei como desenvolvedor full-stack na construção e evolução de produtos usados em escala. Meu trabalho no dia a dia envolvia arquitetar e entregar novas funcionalidades, melhorar sistemas existentes e tomar decisões técnicas que ajudavam a manter o código saudável à medida que o produto crescia.\n\nTrabalhei no desenvolvimento de editores de texto ricos personalizados, com formatação avançada, transcrição assistida por IA e geração de PDFs para fluxos clínicos. Também contribuí para o planejamento da refatoração de um grande conjunto de funções AWS Lambda. Além disso, ajudei no onboarding de novos desenvolvedores, participei de discussões de contratação e apoiei a definição técnica inicial de novos produtos."
         },
         "junior": {
           "title": "desenvolvedor full-stack júnior",
@@ -48,6 +49,13 @@
           "title": "estagiário em desenvolvimento full-stack",
           "period": "out. 2020 – abr. 2021",
           "description": "Durante o estágio, trabalhei próximo de desenvolvedores mais experientes para entender como sistemas reais são projetados, testados e mantidos. Contribuí para um módulo financeiro que lidava com operações reais de clínicas, como faturamento, estoque e repasse de receitas. Foi meu primeiro contato profundo com desenvolvimento em produção, usando Node.js, TypeScript, React, MySQL e serviços da AWS."
+        }
+      },
+      "certtaRoles": {
+        "fullstack": {
+          "title": "desenvolvedor full-stack pleno",
+          "period": "mar. 2026 – atual",
+          "description": "Atuo como desenvolvedor full-stack pleno na Certta, construindo e evoluindo funcionalidades do produto em toda a stack. Colaboro em desenho técnico, implementação e qualidade enquanto entregamos soluções com IA."
         }
       }
     },

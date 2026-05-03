@@ -126,24 +126,19 @@
   * {
     @apply border-border outline-ring/50;
   }
-body {
-  @apply text-foreground;
+  body {
+    @apply text-foreground;
 
-  background-color: var(--background);
-  background-image:
-    radial-gradient(
-      1200px 600px at 50% -200px,
-      var(--background-muted),
-      transparent 60%
-    ),
-    linear-gradient(
-      180deg,
-      var(--background-soft),
-      var(--background)
-    );
+    background-color: var(--background);
+    background-image:
+      radial-gradient(
+        1200px 600px at 50% -200px,
+        var(--background-muted),
+        transparent 60%
+      ), linear-gradient(180deg, var(--background-soft), var(--background));
 
-  background-attachment: fixed;
-}
+    background-attachment: fixed;
+  }
 
   :root {
     --nav-height: 4rem;
@@ -154,7 +149,6 @@ body {
       --nav-height: 4.5rem;
     }
   }
-
 }
 
 @layer utilities {
@@ -168,7 +162,6 @@ body {
       transform: scaleX(1) translateY(-50%);
       opacity: 1;
     }
-    60%,
     80% {
       transform: scaleX(1) translateY(-50%);
       opacity: 1;

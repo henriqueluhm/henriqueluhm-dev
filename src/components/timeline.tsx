@@ -70,9 +70,7 @@ function TimelineCheckpoint({
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="overflow-hidden"
           >
-            <div className="border-l border-muted-foreground ml-3.75 px-2 pt-1 pb-2 font-light">
-              {children}
-            </div>
+            <div className="ml-8 px-2 pt-1 pb-2 font-light">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -81,7 +79,7 @@ function TimelineCheckpoint({
 }
 
 type TimelineProps = {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
 };
 

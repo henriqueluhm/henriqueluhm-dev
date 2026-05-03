@@ -1,4 +1,5 @@
 import { ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
+import * as motion from "motion/react-client";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import SnakeGame from "@/components/snake-game";
@@ -9,7 +10,6 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import * as motion from "motion/react-client";
 
 function BackButton({ label }: { label: string }) {
   return (
